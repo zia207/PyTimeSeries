@@ -1,0 +1,112 @@
+# Quarto website configuration — Time Series Analysis in Python
+# Build locally with:  quarto render      (outputs to ./docs for GitHub Pages)
+# Preview with:        quarto preview
+project:
+  type: website
+  output-dir: docs
+
+# The notebooks are already executed; render their stored outputs (do not re-run).
+execute:
+  enabled: false
+
+website:
+  title: "Time Series Analysis in Python"
+  description: "From statistical modeling to machine learning — a 12-part applied tutorial."
+  page-navigation: true
+  reader-mode: true
+  navbar:
+    background: primary
+    search: true
+    left:
+      - href: index.md
+        text: "Home"
+      - text: "Parts"
+        menu:
+          - href: notebooks/part-01-foundations.ipynb
+            text: "1 · Foundations & Data Handling"
+          - href: notebooks/part-02-stationarity.ipynb
+            text: "2 · Statistical Properties & Decomposition"
+          - href: notebooks/part-03-smoothing.ipynb
+            text: "3 · Smoothing & Exponential Methods"
+          - href: notebooks/part-04-arima.ipynb
+            text: "4 · The ARIMA Family"
+          - href: notebooks/part-05-advanced-multivariate.ipynb
+            text: "5 · Advanced & Multivariate Models"
+          - href: notebooks/part-06-evaluation-backtesting.ipynb
+            text: "6 · Evaluation, Backtesting & Baselines"
+          - href: notebooks/part-07-feature-engineering.ipynb
+            text: "7 · Feature Engineering & the ML Reduction"
+          - href: notebooks/part-08-ml-forecasting.ipynb
+            text: "8 · Machine Learning Forecasting"
+          - href: notebooks/part-09-deep-learning.ipynb
+            text: "9 · Deep Learning for Sequences"
+          - href: notebooks/part-10-modern-dl.ipynb
+            text: "10 · Modern Deep Architectures"
+          - href: notebooks/part-11-specialized-topics.ipynb
+            text: "11 · Specialized Topics"
+          - href: notebooks/part-12-deployment-capstone.ipynb
+            text: "12 · Deployment & Capstone"
+    tools:
+      - icon: github
+        text: "Source"
+        href: https://github.com/USERNAME/REPO
+  sidebar:
+    style: "docked"
+    search: true
+    collapse-level: 2
+    contents:
+      - href: index.md
+        text: "Overview"
+      - section: "Foundations"
+        contents:
+          - href: notebooks/part-01-foundations.ipynb
+            text: "1 · Foundations & Data Handling"
+          - href: notebooks/part-02-stationarity.ipynb
+            text: "2 · Statistical Properties & Decomposition"
+      - section: "Classical Forecasting"
+        contents:
+          - href: notebooks/part-03-smoothing.ipynb
+            text: "3 · Smoothing & Exponential Methods"
+          - href: notebooks/part-04-arima.ipynb
+            text: "4 · The ARIMA Family"
+          - href: notebooks/part-05-advanced-multivariate.ipynb
+            text: "5 · Advanced & Multivariate Models"
+      - section: "Rigorous Evaluation"
+        contents:
+          - href: notebooks/part-06-evaluation-backtesting.ipynb
+            text: "6 · Evaluation, Backtesting & Baselines"
+      - section: "Machine Learning"
+        contents:
+          - href: notebooks/part-07-feature-engineering.ipynb
+            text: "7 · Feature Engineering & the ML Reduction"
+          - href: notebooks/part-08-ml-forecasting.ipynb
+            text: "8 · Machine Learning Forecasting"
+      - section: "Deep Learning"
+        contents:
+          - href: notebooks/part-09-deep-learning.ipynb
+            text: "9 · Deep Learning for Sequences"
+          - href: notebooks/part-10-modern-dl.ipynb
+            text: "10 · Modern Deep Architectures"
+      - section: "Frontiers & Practice"
+        contents:
+          - href: notebooks/part-11-specialized-topics.ipynb
+            text: "11 · Specialized Topics"
+          - href: notebooks/part-12-deployment-capstone.ipynb
+            text: "12 · Deployment & Capstone"
+  page-footer:
+    center: "Time Series Analysis in Python · a 12-part tutorial"
+
+format:
+  html:
+    theme:
+      light: cosmo
+    toc: true
+    toc-depth: 3
+    toc-location: right
+    code-fold: false
+    code-tools: true
+    code-copy: true
+    highlight-style: github
+    fig-align: center
+    smooth-scroll: true
+    css: styles.css

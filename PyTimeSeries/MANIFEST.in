@@ -1,0 +1,7 @@
+include README.md LICENSE
+recursive-include pytimeseries *.py
+recursive-include tests *.py
+recursive-include examples *.py
+prune Tutorials
+prune docs
+prune dist

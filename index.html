@@ -1,0 +1,57 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>PyTimeSeries — User Guide</title>
+<style>
+:root{--brand:#1a4971;--brand2:#2b6cb0;--ink:#1a202c;--line:#e2e8f0;--bg:#f7f9fc}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);
+font-family:-apple-system,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;line-height:1.6}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px 60px}
+.banner{background:linear-gradient(120deg,var(--brand),#123753);color:#fff;padding:40px 0;margin-bottom:8px;
+box-shadow:0 8px 28px rgba(16,42,67,.18)}
+.banner .wrap{padding-top:0;padding-bottom:0}
+.kicker{text-transform:uppercase;letter-spacing:.16em;font-size:12px;font-weight:600;opacity:.85}
+h1{margin:.15em 0;font-size:32px}.sub{font-size:17px;opacity:.95}
+h2{color:var(--brand);border-bottom:2px solid var(--line);padding-bottom:.3em;margin-top:1.8em}
+a{color:var(--brand2);text-decoration:none}a:hover{text-decoration:underline}
+code,pre{background:#eef3f9;border-radius:6px}code{padding:1px 5px}
+pre{padding:14px 16px;overflow:auto;border:1px solid var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px;margin-top:14px}
+.card{background:#fff;border:1px solid var(--line);border-radius:10px;padding:14px 16px;
+box-shadow:0 1px 3px rgba(16,42,67,.06)}
+.card .n{color:var(--brand2);font-weight:700;font-size:13px}
+.card a{font-weight:600}.card p{margin:.3em 0 0;font-size:13.5px;color:#475569}
+.foot{margin-top:40px;font-size:13px;color:#64748b;border-top:1px solid var(--line);padding-top:14px}
+</style></head><body>
+<div class="banner"><div class="wrap">
+<div class="kicker">PyTimeSeries · Documentation</div>
+<h1>PyTimeSeries — User Guide</h1>
+<div class="sub">A unified, tutorial-driven forecasting library — from <code>Naive</code> to <code>PatchTST</code> behind one API.</div>
+</div></div>
+<div class="wrap">
+<h2>Install</h2>
+<pre>pip install pytimeseries            # core
+pip install "pytimeseries[ml]"     # + LightGBM/XGBoost/CatBoost, AutoARIMA
+pip install "pytimeseries[dl]"     # + PyTorch, neuralforecast
+pip install "pytimeseries[extra]"  # + arch, prophet, ruptures, hierarchicalforecast
+pip install "pytimeseries[all]"</pre>
+
+<h2>Tutorials (12 parts)</h2>
+<p>Each notebook demonstrates that part's <code>pytimeseries</code> API on one shared
+commodity-price dataset, scored with the same walk-forward backtest.</p>
+<div class="grid">
+<div class="card"><div class="n">Part 1</div><a href="Tutorials/Part01_Foundations.html">Foundations &amp; Data Handling</a><p>Time-indexed data and package entry points.</p></div>
+<div class="card"><div class="n">Part 2</div><a href="Tutorials/Part02_Stationarity.html">Stationarity &amp; Decomposition</a><p>ADF, differencing, STL.</p></div>
+<div class="card"><div class="n">Part 3</div><a href="Tutorials/Part03_Smoothing.html">Smoothing &amp; ETS</a><p><code>pt.ETS</code> + auto baselines + backtest.</p></div>
+<div class="card"><div class="n">Part 4</div><a href="Tutorials/Part04_ARIMA.html">The ARIMA Family</a><p><code>pt.ARIMA</code>, <code>pt.AutoARIMA</code>.</p></div>
+<div class="card"><div class="n">Part 5</div><a href="Tutorials/Part05_Advanced_Multivariate.html">Advanced &amp; Multivariate</a><p>GARCH, state-space, Prophet, VAR/VECM.</p></div>
+<div class="card"><div class="n">Part 6</div><a href="Tutorials/Part06_Evaluation_Backtesting.html">Evaluation &amp; Backtesting</a><p>Walk-forward CV, conformal intervals.</p></div>
+<div class="card"><div class="n">Part 7</div><a href="Tutorials/Part07_Feature_Engineering.html">Feature Engineering</a><p>The ML reduction: lags &rarr; regressor.</p></div>
+<div class="card"><div class="n">Part 8</div><a href="Tutorials/Part08_ML_Forecasting.html">Machine Learning</a><p>Gradient boosting + global models.</p></div>
+<div class="card"><div class="n">Part 9</div><a href="Tutorials/Part09_Deep_Learning.html">Deep Learning</a><p>LSTM / TCN / Seq2Seq via <code>pt.deep</code>.</p></div>
+<div class="card"><div class="n">Part 10</div><a href="Tutorials/Part10_Modern_DL.html">Modern Architectures</a><p>N-HiTS / N-BEATS / PatchTST.</p></div>
+<div class="card"><div class="n">Part 11</div><a href="Tutorials/Part11_Specialized_Topics.html">Specialized Topics</a><p>Reconciliation, detection, intermittent, foundation.</p></div>
+<div class="card"><div class="n">Part 12</div><a href="Tutorials/Part12_Deployment_Capstone.html">Deployment &amp; Capstone</a><p>Persist, monitor, retrain, serve.</p></div>
+</div>
+<div class="foot">MIT licensed · Zia U. Ahmed ·
+<a href="https://github.com/zia207/PyTimeSeries">github.com/zia207/PyTimeSeries</a></div>
+</div></body></html>

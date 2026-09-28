@@ -1,0 +1,54 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pytimeseries"
+version = "0.5.0"
+description = "A unified, tutorial-driven time-series forecasting library — from Naive to PatchTST behind one API."
+readme = "README.md"
+requires-python = ">=3.10"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Zia U. Ahmed", email = "zia207@gmail.com" }]
+keywords = ["time series", "forecasting", "ETS", "ARIMA", "machine learning", "deep learning"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Development Status :: 4 - Beta",
+    "Operating System :: OS Independent",
+]
+
+# Lean core — installs only what baselines / ETS / reduction / evaluation need.
+dependencies = [
+    "numpy>=1.23",
+    "pandas>=1.5",
+    "scikit-learn>=1.1",
+    "statsmodels>=0.14",
+    "joblib>=1.2",
+]
+
+[project.optional-dependencies]
+ml = ["lightgbm", "xgboost", "catboost", "pmdarima"]
+dl = ["torch", "neuralforecast"]
+extra = ["arch", "prophet", "ruptures", "hierarchicalforecast", "statsforecast", "tsfresh"]
+foundation = ["chronos-forecasting", "nixtla", "timesfm", "uni2ts"]
+dev = ["pytest>=7", "ruff"]
+all = [
+    "lightgbm", "xgboost", "catboost", "pmdarima",
+    "torch", "neuralforecast",
+    "arch", "prophet", "ruptures", "hierarchicalforecast", "statsforecast", "tsfresh",
+]
+
+[project.urls]
+Homepage = "https://github.com/zia207/PyTimeSeries"
+Repository = "https://github.com/zia207/PyTimeSeries"
+Documentation = "https://zia207.github.io/PyTimeSeries"
+"Bug Tracker" = "https://github.com/zia207/PyTimeSeries/issues"
+
+[tool.setuptools.packages.find]
+include = ["pytimeseries*"]
+
+[tool.ruff]
+line-length = 100
